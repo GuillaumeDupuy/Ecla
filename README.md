@@ -68,3 +68,11 @@ Ecla.exe <file>
 ## Example
 
 #### hello-world file
+
+For Linux:
+
+![image](https://github.com/GuillaumeDupuy/Ecla/assets/56391911/cda6ce8a-35c9-4bd7-8cbc-f749876878b6)
+
+For Windows:
+  
+![image](https://github.com/GuillaumeDupuy/Ecla/assets/56391911/cc12aaeb-493a-420c-88e0-8a325cb38175)
