@@ -64,3 +64,7 @@ Ecla.exe <file>
 ```
 
 > Replace ```<file>``` with the path to the file you want to execute.
+
+## Example
+
+#### hello-world file
