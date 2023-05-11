@@ -1,4 +1,4 @@
 import "console";
 
 console.println("Hello World!");
-console.printInColor("blue","Hello World!\n");
+console.printInColor("blue","Hello World!");
