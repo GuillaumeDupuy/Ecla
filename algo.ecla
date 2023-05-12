@@ -59,9 +59,7 @@ if (c%2 == 0) {
 
 var year int = console.inputInt("Entrez une année : ");
 
-# || (year%400 == 0) error => Expected If LBRACE
-
-if (year%4 == 0 && year%100 != 0)  {
+if ((year%4 == 0 && year%100 != 0)  || (year%400 == 0)) {
     console.printf("L'année %d est bissextile\n", year);
 } else {
     console.printf("L'année %d n'est pas bissextile\n", year);
@@ -94,20 +92,18 @@ for (index,elem range hello) {
 
 console.printInColor("red","Test While\n");
 
-var secretvalue int = 42;
-var uservalue int = console.inputInt("Entrez un nombre : ");
+var secret_value int = 42;
+var user_value int = console.inputInt("Entrez un nombre : ");
 
-# secret_value error => Expected variable type instead of value
-
-while (uservalue != secretvalue) {
-    if (uservalue < secretvalue) {
+while (user_value != secret_value) {
+    if (user_value < secret_value) {
         console.print("C'est plus\n");
     } else {
         console.print("C'est moins\n");
     }
-    uservalue = console.inputInt("Entrez un nombre : ");
+    user_value = console.inputInt("Entrez un nombre : ");
 }
-if (uservalue == secretvalue) {
+if (user_value == secret_value) {
     console.print("Bravo !\n");
 }
 
