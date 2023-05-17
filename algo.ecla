@@ -146,3 +146,88 @@ var intmax int = cast.floatToInt(max);
 var intresult int = cast.floatToInt(result);
 
 console.printf("Nombre aléatoire entre %d et %d = %d\n", intmin, intmax, intresult);
+
+# ----------------------------------------------------------------------------------------------------------------
+
+console.printInColor("red","Test list\n");
+
+var hello []string = ["Hello", "World", "!"];
+var nb []int = [1, 2, 3, 4, 5];
+
+console.printf("hello[0] = %s\n", hello[0]);
+console.printf("nb[0] = %d\n", nb[0]);
+
+# ----------------------------------------------------------------------------------------------------------------
+
+console.printInColor("red","Create bubble sort\n");
+
+var L []int = [2,5,4,1,5,4,3,5];
+
+function len(L : []int) (int) {
+    var i int = 0;
+    for (index, elem range L) {
+        i++;
+    }
+    return i;
+}
+
+function tri_bulles(L : []int) ([]int) {
+    var n int = len(L);
+    var i int = 0;
+    var j int = 0;
+    var tmp int = 0;
+    var permutation bool = true;
+
+    while (permutation) {
+        permutation = false;
+        for (var i int = 0, i < (n-1), i++) {
+            if (L[i] > L[i+1]) {
+                tmp = L[i];
+                L[i] = L[i+1];
+                L[i+1] = tmp;
+                permutation = true;
+            }
+        }
+    }
+    return L;
+}
+
+console.printf("L avant tri = %v\n", L);
+console.printf("L après tri = %v\n", tri_bulles(L));
+
+# ----------------------------------------------------------------------------------------------------------------
+
+console.printInColor("red","Test print multiple string according to one digit\n");
+
+function print_strXint(str : string, nb : int) {
+    for (var i int = 0, i < nb, i++) {
+        console.println(str);
+    }
+}
+
+function print_strXint2(str : string, nb : int) (string){
+    var result string = "";
+    for (var i int = 0, i < nb, i++) {
+        result = result + str + "\n";
+    }
+    return result;
+}
+
+print_strXint("Hello World", 4);
+console.println("Compare with print_strXint2");
+console.print(print_strXint2("Hello World", 4));
+
+# ----------------------------------------------------------------------------------------------------------------
+
+console.printInColor("red","Test function power\n");
+
+function power(a : int, b : int) (int) {
+    var result int = 1;
+    for (var i int = 0, i < b, i++) {
+        result *= a;
+    }
+    return result;
+}
+
+console.printf("2^3 with my code = %d\n", power(2,3));
+console.printf("2^3 with math.pow = %f\n", math.pow(2.0,3.0));
